@@ -1,8 +1,7 @@
-//24516659 Qingyang Jiao
 public class HealthProfessional {
+    
     private int id;
     private String name;
-    
     private String specialty;
 
     public HealthProfessional() {
