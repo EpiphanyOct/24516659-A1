@@ -1,8 +1,6 @@
-
 public class Dietitian extends HealthProfessional {
-    private String areaOfExpertise; 
+    private String areaOfExpertise;
 
-    
     public Dietitian() {
         super();
     }

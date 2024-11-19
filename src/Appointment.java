@@ -1,10 +1,7 @@
-
 public class Appointment {
     private String patientName;
     private String patientMobile;
-
     private String timeSlot;
-
     private HealthProfessional selectedDoctor;
 
     public Appointment() {
@@ -23,7 +20,7 @@ public class Appointment {
         System.out.println("Patient Mobile: " + patientMobile);
         System.out.println("Time Slot: " + timeSlot);
         System.out.println("Doctor:");
-        selectedDoctor.printInfo(); 
+        selectedDoctor.printInfo();
     }
 
     public String getPatientName() {

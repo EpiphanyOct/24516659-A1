@@ -1,27 +1,26 @@
-
 public class Dentist extends HealthProfessional {
-    private boolean specializesInOrthodontics; 
+    private boolean isOrthodontist;
 
     public Dentist() {
         super();
     }
 
-    public Dentist(int id, String name, String specialty, boolean specializesInOrthodontics) {
+    public Dentist(int id, String name, String specialty, boolean isOrthodontist) {
         super(id, name, specialty);
-        this.specializesInOrthodontics = specializesInOrthodontics;
+        this.isOrthodontist = isOrthodontist;
     }
 
     @Override
     public void printInfo() {
         super.printInfo();
-        System.out.println("Type: Dentist, Specializes in Orthodontics: " + specializesInOrthodontics);
+        System.out.println("Type: Dentist, Specializes in Orthodontics: " + isOrthodontist);
     }
 
-    public boolean isSpecializesInOrthodontics() {
-        return specializesInOrthodontics;
+    public boolean isOrthodontist() {
+        return isOrthodontist;
     }
 
-    public void setSpecializesInOrthodontics(boolean specializesInOrthodontics) {
-        this.specializesInOrthodontics = specializesInOrthodontics;
+    public void setOrthodontist(boolean isOrthodontist) {
+        this.isOrthodontist = isOrthodontist;
     }
 }

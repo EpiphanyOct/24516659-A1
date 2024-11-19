@@ -1,27 +1,26 @@
-
 public class GeneralPractitioner extends HealthProfessional {
-    private boolean hasNarcoticsLicense;
+    private boolean isNarcoticsLicensed;
 
     public GeneralPractitioner() {
         super();
     }
 
-    public GeneralPractitioner(int id, String name, String specialty, boolean hasNarcoticsLicense) {
+    public GeneralPractitioner(int id, String name, String specialty, boolean isNarcoticsLicensed) {
         super(id, name, specialty);
-        this.hasNarcoticsLicense = hasNarcoticsLicense;
+        this.isNarcoticsLicensed = isNarcoticsLicensed;
     }
 
     @Override
     public void printInfo() {
         super.printInfo();
-        System.out.println("Type: General Practitioner, Has Narcotics License: " + hasNarcoticsLicense);
+        System.out.println("Type: General Practitioner, Has Narcotics License: " + isNarcoticsLicensed);
     }
 
-    public boolean isHasNarcoticsLicense() {
-        return hasNarcoticsLicense;
+    public boolean isNarcoticsLicensed() {
+        return isNarcoticsLicensed;
     }
 
-    public void setHasNarcoticsLicense(boolean hasNarcoticsLicense) {
-        this.hasNarcoticsLicense = hasNarcoticsLicense;
+    public void setNarcoticsLicensed(boolean isNarcoticsLicensed) {
+        this.isNarcoticsLicensed = isNarcoticsLicensed;
     }
 }
