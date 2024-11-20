@@ -1,20 +1,17 @@
 public class HealthProfessional {
     private int id;
     private String name;
-    private String[] specialties; // 使用数组存储专业领域
+    private String[] specialties; 
 
-    // 默认构造函数
     public HealthProfessional() {
     }
 
-    // 参数化构造函数
     public HealthProfessional(int id, String name, String[] specialties) {
         setId(id);
         setName(name);
         this.specialties = specialties;
     }
 
-    // ID的安全检查
     public void setId(int id) {
         if (id > 0) {
             this.id = id;
@@ -47,7 +44,6 @@ public class HealthProfessional {
         return specialties;
     }
 
-    // 打印所有实例变量
     public void printDetails() {
         System.out.println("ID: " + id);
         System.out.println("Name: " + name);

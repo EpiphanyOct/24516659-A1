@@ -1,26 +1,17 @@
 public class Appointment {
-    private String patientName;
-    private String patientMobile;
-    private String timeSlot;
-    private HealthProfessional selectedDoctor;
+    private String patientName; 
+    private String patientMobile; 
+    private String preferredTimeSlot; 
+    private HealthProfessional selectedDoctor; 
 
     public Appointment() {
     }
 
-    public Appointment(String patientName, String patientMobile, String timeSlot, HealthProfessional selectedDoctor) {
+    public Appointment(String patientName, String patientMobile, String preferredTimeSlot, HealthProfessional selectedDoctor) {
         this.patientName = patientName;
         this.patientMobile = patientMobile;
-        this.timeSlot = timeSlot;
+        this.preferredTimeSlot = preferredTimeSlot;
         this.selectedDoctor = selectedDoctor;
-    }
-
-    public void printAppointmentDetails() {
-        System.out.println("Appointment Details:");
-        System.out.println("Patient Name: " + patientName);
-        System.out.println("Patient Mobile: " + patientMobile);
-        System.out.println("Time Slot: " + timeSlot);
-        System.out.println("Doctor:");
-        selectedDoctor.printInfo();
     }
 
     public String getPatientName() {
@@ -39,12 +30,12 @@ public class Appointment {
         this.patientMobile = patientMobile;
     }
 
-    public String getTimeSlot() {
-        return timeSlot;
+    public String getPreferredTimeSlot() {
+        return preferredTimeSlot;
     }
 
-    public void setTimeSlot(String timeSlot) {
-        this.timeSlot = timeSlot;
+    public void setPreferredTimeSlot(String preferredTimeSlot) {
+        this.preferredTimeSlot = preferredTimeSlot;
     }
 
     public HealthProfessional getSelectedDoctor() {
@@ -53,5 +44,13 @@ public class Appointment {
 
     public void setSelectedDoctor(HealthProfessional selectedDoctor) {
         this.selectedDoctor = selectedDoctor;
+    }
+
+    public void printDetails() {
+        System.out.println("Patient Name: " + patientName);
+        System.out.println("Patient Mobile: " + patientMobile);
+        System.out.println("Preferred Time Slot: " + preferredTimeSlot);
+        System.out.println("Doctor Details:");
+        selectedDoctor.printDetails(); 
     }
 }

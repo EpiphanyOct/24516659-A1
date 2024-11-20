@@ -1,18 +1,16 @@
 public class Dentist extends HealthProfessional {
-    private boolean specializesInOrthodontics; // 是否专门从事正畸学
-    private boolean specializesInPeriodontology; // 是否专门从事牙周病学
-    private boolean specializesInOralSurgery; // 是否专门从事口腔颌面外科
-    private boolean specializesInProsthodontics; // 是否专门从事口腔修复学
-    private boolean specializesInPediatricDentistry; // 是否专门从事儿童牙科
-    private boolean specializesInOralPathology; // 是否专门从事口腔病理学
-    private boolean specializesInPreventiveDentistry; // 是否专门从事预防牙科
+    private boolean specializesInOrthodontics; 
+    private boolean specializesInPeriodontology; 
+    private boolean specializesInOralSurgery; 
+    private boolean specializesInProsthodontics; 
+    private boolean specializesInPediatricDentistry; 
+    private boolean specializesInOralPathology; 
+    private boolean specializesInPreventiveDentistry; 
 
-    // 默认构造函数
     public Dentist() {
         super();
     }
 
-    // 参数化构造函数
     public Dentist(int id, String name, String[] specialties, 
                    boolean specializesInOrthodontics, boolean specializesInPeriodontology,
                    boolean specializesInOralSurgery, boolean specializesInProsthodontics,
@@ -28,7 +26,6 @@ public class Dentist extends HealthProfessional {
         this.specializesInPreventiveDentistry = specializesInPreventiveDentistry;
     }
 
-    // Getter 和 Setter 方法
     public boolean isSpecializesInOrthodontics() {
         return specializesInOrthodontics;
     }
@@ -85,10 +82,9 @@ public class Dentist extends HealthProfessional {
         this.specializesInPreventiveDentistry = specializesInPreventiveDentistry;
     }
 
-    // 覆盖基类的printDetails方法以展示多态
     @Override
     public void printDetails() {
-        super.printDetails(); // 调用基类的printDetails方法打印基本信息
+        super.printDetails(); // Call the printDetails method of the base class to print basic information.
         System.out.println("Specializes in Orthodontics: " + specializesInOrthodontics);
         System.out.println("Specializes in Periodontology: " + specializesInPeriodontology);
         System.out.println("Specializes in Oral Surgery: " + specializesInOralSurgery);
@@ -97,7 +93,6 @@ public class Dentist extends HealthProfessional {
         System.out.println("Specializes in Oral Pathology: " + specializesInOralPathology);
         System.out.println("Specializes in Preventive Dentistry: " + specializesInPreventiveDentistry);
     }
-        // 添加 main 方法
         public static void main(String[] args) {
             // Part 3 – Using classes and objects
             Dentist dentist1 = new Dentist(4, "Dr. Michael Brown", new String[]{"Dentistry"}, true, false, false, false, false, false, false);
@@ -106,7 +101,6 @@ public class Dentist extends HealthProfessional {
             dentist1.printDetails();
             dentist2.printDetails();
     
-            // 添加分隔线
             System.out.println("------------------------------");
         }
     
